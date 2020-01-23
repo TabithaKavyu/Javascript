@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Functional Programming </title>
+    <script>
+        /**
+     * A long process to prepare tea.
+     * @return {string} A cup of tea.
+     **/
+            const prepareTea = () => 'greenTea';
+
+            /**
+             * Get given number of cups of tea.
+             * @param {number} numOfCups Number of required cups of tea.
+             * @return {Array<string>} Given amount of tea cups.
+             **/
+            const getTea = (numOfCups) => {
+                const teaCups = [];
+
+                for (let cups = 1; cups <= numOfCups; cups += 1) {
+                    const teaCup = prepareTea();
+                    teaCups.push(teaCup);
+                }
+
+                return teaCups;
+            }
+
+            const tea4TeamFCC = getTea(40); 
+
+            console.log(tea4TeamFCC);
+
+    /**
+     * A long process to prepare green tea.
+     * @return {string} A cup of green tea.
+     **/
+        const prepareGreenTea = () => 'greenTea';
+
+        /**
+         * A long process to prepare black tea.
+         * @return {string} A cup of black tea.
+         **/
+        const prepareBlackTea = () => 'blackTea';
+
+        /**
+         * Get given number of cups of tea.
+         * @param {function():string} prepareTea The type of tea preparing function.
+         * @param {number} numOfCups Number of required cups of tea.
+         * @return {Array<string>} Given amount of tea cups.
+         **/
+        const getTea1 = (prepareTea, numOfCups) => {
+            const teaCups = [];
+
+            for (let cups = 1; cups <= numOfCups; cups += 1) {
+                const teaCup = prepareTea();
+                teaCups.push(teaCup);
+            }
+
+            return teaCups;
+        };
+
+        // Add your code below this line
+
+        const tea4GreenTeamFCC = getTea1(prepareGreenTea, 27); // :(
+        const tea4BlackTeamFCC = getTea1(prepareBlackTea, 13); // :(
+
+        // Add your code above this line
+
+        console.log(
+            tea4GreenTeamFCC,
+            tea4BlackTeamFCC
+        );
+
+
+
+ </script>
+ </html>
