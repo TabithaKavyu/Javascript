@@ -1,0 +1,21 @@
+!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FCC Algorithms </title>
+    <script>
+/*Check two arrays and return a new array that contains only the items that are not in either of the original arrays.*/
+       function diffArray(arr1, arr2) {
+          return arr1
+            .concat(arr2)
+            .filter(item => !arr1.includes(item) || !arr2.includes(item));
+        }
+
+     diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
+     };
+    </script>
+    </html>
+
