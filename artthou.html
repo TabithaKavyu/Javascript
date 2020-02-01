@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Algorithms </title>
+   <script>
+   //function that looks through an array of objects (first argument) and returns an array of all objects that have matching name and value pairs (second argument). 
+    function whatIsInAName(collection, source) {
+     // What's in a name?
+     var arr = []
+    var srcKeys = Object.keys(source);
+
+    return collection.filter(function(obj) {
+    return srcKeys.every(function(key) {
+      return obj.hasOwnProperty(key) && obj[key] === source[key];
+    });
+  });
+}
+
+
+
+
+whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
+</script>
+</html>
