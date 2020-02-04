@@ -1,4 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Search and Replace Algorithm </title>
+    <script>
 
 function myReplace(str, before, after) {
   if (/^[A-Z]/.test(before)) {
@@ -14,3 +22,10 @@ function myReplace(str, before, after) {
 
 
 myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped");
+  </script>
+  </html>
+  
+  /*In this solution, regular expression ^[A-Z] is used to check (test) if the first character of before is uppercase.
+If first letter of before is capitalized, change the first letter of after to uppercase.
+Else: If first letter of before is lowercase, change the first letter of after to lowercase
+Return the new string replacing before with after.*/
