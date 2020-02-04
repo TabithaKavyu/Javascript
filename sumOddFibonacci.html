@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Convert To HTML Algorithm </title>
+    
+  <script>
+    function sumFibs(num) {
+  var prevNumber = 0;
+  var currNumber = 1;
+  var result = 0;
+  while (currNumber <= num) {
+    if (currNumber % 2 !== 0) {
+      result += currNumber;
+    }
+
+    currNumber += prevNumber;
+    prevNumber = currNumber - prevNumber;
+  }
+
+  return result;
+}
+
+
+
+sumFibs(4);
+
+</script>
+</head>
+</html>
