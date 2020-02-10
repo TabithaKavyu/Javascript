@@ -1,4 +1,7 @@
 
+
+
+
 function checkCashRegister(price, cash, cid) {
   var output = { status: null, change: [] };
   var change = cash - price;
@@ -70,6 +73,8 @@ var denom = [
   return output;
 }
 
+
+
 // test here
 checkCashRegister(19.5, 20.0, [
   ["PENNY", 1.01],
@@ -82,3 +87,6 @@ checkCashRegister(19.5, 20.0, [
   ["TWENTY", 60.0],
   ["ONE HUNDRED", 100.0]
 ]);
+    </script>
+    </head>
+</html>
